@@ -118,7 +118,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[parametr]]></Formula>
+						<Formula><![CDATA[издержки]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -165,7 +165,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[1.2]]></Formula>
+						<Formula><![CDATA[коэффециэнтУспехаСоперникаФирмы]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -216,7 +216,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[x]]></InitialValue>
+						<InitialValue><![CDATA[ЕдиноврЗатратыНаИнвест]]></InitialValue>
 						<Color/>
 					</Properties>
 				</Variable>
@@ -309,7 +309,7 @@
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1737041122239</Id>
-					<Name><![CDATA[x]]></Name>
+					<Name><![CDATA[ЕдиноврЗатратыНаИнвест]]></Name>
 					<Description><![CDATA[сумму единовременных затрат на инвестиции в НИОКР в момент начала соперничества t=0]]></Description>
 					<X>90</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -412,7 +412,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>270</X><Y>-110</Y></Direction>
 					<Id>1737041698160</Id>
-					<Name><![CDATA[x - затратыНаНауку]]></Name>
+					<Name><![CDATA[ЕдиноврЗатратыНаИнвест - затратыНаНауку]]></Name>
 					<X>90</X><Y>230</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -502,7 +502,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>220</X><Y>-10</Y></Direction>
 					<Id>1737113581628</Id>
-					<Name><![CDATA[x - vl]]></Name>
+					<Name><![CDATA[ЕдиноврЗатратыНаИнвест - vl]]></Name>
 					<X>90</X><Y>230</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -519,6 +519,36 @@
 					<Id>1737113664070</Id>
 					<Name><![CDATA[r - vl]]></Name>
 					<X>380</X><Y>270</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1737118496565" TargetId="1737041031472" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>80</X><Y>-30</Y></Direction>
+					<Id>1737118725970</Id>
+					<Name><![CDATA[издержки - c]]></Name>
+					<X>50</X><Y>90</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1737118594845" TargetId="1737113202290" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>180</X><Y>-30</Y></Direction>
+					<Id>1737118765774</Id>
+					<Name><![CDATA[коэффециэнтУспехаСоперникаФирмы - a]]></Name>
+					<X>-140</X><Y>200</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -723,7 +753,7 @@ return result;	]]></Body>
 					<ParameterName><![CDATA[c0]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[x]]></ParameterName>
+					<ParameterName><![CDATA[ЕдиноврЗатратыНаИнвест]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[k]]></ParameterName>
