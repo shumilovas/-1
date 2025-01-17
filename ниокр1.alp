@@ -381,6 +381,30 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1737118594845</Id>
+					<Name><![CDATA[коэффециэнтУспехаСоперникаФирмы]]></Name>
+					<X>-140</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1.2]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1737118594843</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Dependences>
 				<Link SourceId="1737041122239" TargetId="1737041566043" Polarity="null">
@@ -706,6 +730,9 @@ return result;	]]></Body>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[издержки]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[коэффециэнтУспехаСоперникаФирмы]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
