@@ -127,7 +127,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1737041847270</Id>
 					<Name><![CDATA[числоПатентов]]></Name>
-					<X>100</X><Y>310</Y>
+					<X>200</X><Y>500</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -182,6 +182,66 @@
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
 						<Formula><![CDATA[1.1]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1737375340495</Id>
+					<Name><![CDATA[затратыНаЗПчас]]></Name>
+					<X>140</X><Y>290</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[КолвоПерс*средЗпКоннс/(30*24)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1737375574785</Id>
+					<Name><![CDATA[аммВчас]]></Name>
+					<X>180</X><Y>340</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Аммортизация/(365*24)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1737376095585</Id>
+					<Name><![CDATA[ТекущиеИздержки]]></Name>
+					<X>260</X><Y>290</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[аммВчас +затратыНаЗПчас + ОснСрЧас]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1737376828095</Id>
+					<Name><![CDATA[ОснСрЧас]]></Name>
+					<X>240</X><Y>360</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[оснСрГод/(365*24)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -284,31 +344,6 @@
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1737040633152</Id>
-					<Name><![CDATA[ТекущиеИздержки]]></Name>
-					<Description><![CDATA[текущие удельные издержки фирмы l]]></Description>
-					<X>261</X><Y>271</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[2500]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1737040633150</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1737041122239</Id>
 					<Name><![CDATA[ЕдиноврЗатратыНаИнвест]]></Name>
 					<Description><![CDATA[сумму единовременных затрат на инвестиции в НИОКР в момент начала соперничества t=0]]></Description>
@@ -322,7 +357,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[100000]]></Code>
+							<Code><![CDATA[1000000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1737041122237</Id>
@@ -406,6 +441,106 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1737374695100</Id>
+					<Name><![CDATA[КолвоПерс]]></Name>
+					<Description><![CDATA[количество персонала2021  КОннас выжимки 1отчет новомет.docx]]></Description>
+					<X>30</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[35]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1737374695098</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1737375291478</Id>
+					<Name><![CDATA[средЗпКоннс]]></Name>
+					<Description><![CDATA[в месяц  КОннас выжимки 1отчет новомет.docx]]></Description>
+					<X>30</X><Y>310</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[68500]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1737375291476</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1737375529029</Id>
+					<Name><![CDATA[Аммортизация]]></Name>
+					<Description><![CDATA[в год Коннас]]></Description>
+					<X>40</X><Y>350</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[2000000000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1737375529027</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1737376729467</Id>
+					<Name><![CDATA[оснСрГод]]></Name>
+					<Description><![CDATA[C:/Users/1/Documents/не%20программные/работа%20дмитрий/данные%20от%20конкурента/новомет/Budget%202022_rus%20_%2030%2012%2021%20СД%20_%20Project%20Powder%20v3.pdf
+
+Приобретение основных средств и НИОКР/НМА (4 761) (4 047) (4 025) (5 125) (1 100) 27% (3 982) (2 502) (3 479) (4 427) (779) (1 544) (546) (698)
+]]></Description>
+					<X>40</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1737376729464</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Dependences>
 				<Link SourceId="1737041122239" TargetId="1737041566043" Polarity="null">
@@ -441,10 +576,10 @@
 				<Link SourceId="1737041847270" TargetId="1737040901679" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>270</X><Y>160</Y></Direction>
+					<Direction><X>170</X><Y>-30</Y></Direction>
 					<Id>1737112595183</Id>
 					<Name><![CDATA[числоПатентов - П]]></Name>
-					<X>100</X><Y>310</Y>
+					<X>200</X><Y>500</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -550,6 +685,111 @@
 					<Id>1737118765774</Id>
 					<Name><![CDATA[коэффециэнтУспехаСоперникаФирмы - a]]></Name>
 					<X>-140</X><Y>200</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1737374695100" TargetId="1737375340495" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>110</X><Y>30</Y></Direction>
+					<Id>1737375374696</Id>
+					<Name><![CDATA[КолвоПерс - затратыНаЗПчас]]></Name>
+					<X>30</X><Y>260</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1737375291478" TargetId="1737375340495" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>110</X><Y>-20</Y></Direction>
+					<Id>1737375379782</Id>
+					<Name><![CDATA[средЗпКоннс - затратыНаЗПчас]]></Name>
+					<X>30</X><Y>310</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1737375529029" TargetId="1737375574785" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>140</X><Y>-10</Y></Direction>
+					<Id>1737375603712</Id>
+					<Name><![CDATA[Аммортизация - аммВчас]]></Name>
+					<X>40</X><Y>350</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1737375340495" TargetId="1737376095585" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>0</Y></Direction>
+					<Id>1737376140856</Id>
+					<Name><![CDATA[затратыНаЗПчас - ТекущиеИздержки]]></Name>
+					<X>140</X><Y>290</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1737375574785" TargetId="1737376095585" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>80</X><Y>-50</Y></Direction>
+					<Id>1737376151732</Id>
+					<Name><![CDATA[аммВчас - ТекущиеИздержки]]></Name>
+					<X>180</X><Y>340</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1737376729467" TargetId="1737376828095" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>200</X><Y>-20</Y></Direction>
+					<Id>1737376854084</Id>
+					<Name><![CDATA[оснСрГод - ОснСрЧас]]></Name>
+					<X>40</X><Y>380</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1737376828095" TargetId="1737376095585" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>20</X><Y>-70</Y></Direction>
+					<Id>1737376954538</Id>
+					<Name><![CDATA[ОснСрЧас - ТекущиеИздержки]]></Name>
+					<X>240</X><Y>360</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -751,9 +991,6 @@ return result;	]]></Body>
 
 			<Parameters>			
 				<Parameter>
-					<ParameterName><![CDATA[ТекущиеИздержки]]></ParameterName>
-				</Parameter>
-				<Parameter>
 					<ParameterName><![CDATA[ЕдиноврЗатратыНаИнвест]]></ParameterName>
 				</Parameter>
 				<Parameter>
@@ -764,6 +1001,18 @@ return result;	]]></Body>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[коэффециэнтУспехаСоперникаФирмы]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[КолвоПерс]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[средЗпКоннс]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Аммортизация]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[оснСрГод]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
@@ -1794,19 +2043,6 @@ copyToClipboard( s );]]></ActionCode>
 			</Presentation>
 
 			<Parameter>	
-				<Id>1737040633152</Id>
-				<Type>DISCRETE</Type>
-				<Min Class="CodeValue">
-					<Code><![CDATA[100]]></Code>
-				</Min>
-				<Max Class="CodeValue">
-					<Code><![CDATA[10000]]></Code>
-				</Max>
-				<Step Class="CodeValue">
-					<Code><![CDATA[10]]></Code>
-				</Step>
-			</Parameter>
-			<Parameter>	
 				<Id>1737041122239</Id>
 				<Type>DISCRETE</Type>
 				<Min Class="CodeValue">
@@ -1860,6 +2096,22 @@ copyToClipboard( s );]]></ActionCode>
 				<Max Class="CodeValue">
 					<Code><![CDATA[2]]></Code>
 				</Max>
+			</Parameter>
+			<Parameter>	
+				<Id>1737374695100</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1737375291478</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1737375529029</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1737376729467</Id>
+				<Type>FIXED</Type>
 			</Parameter>
 			<ObjectiveFunctionCode><![CDATA[root.function()]]></ObjectiveFunctionCode>
 			<Objective>MAXIMIZE</Objective>  
