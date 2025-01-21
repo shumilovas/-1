@@ -15,7 +15,7 @@
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1737039678016</Id>
-			<Name><![CDATA[Main]]></Name>
+			<Name><![CDATA[НИОКР]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1737039678022</Id>
@@ -846,8 +846,8 @@
 					</Properties>
 					<Action><![CDATA[if (vl>0)
 	{
-	traceln("выгода с патентов, время , часов " +time())
-	Rn = Rn - затратыНаНауку + vl
+	traceln("выгода с патентов, время , часов " +time());
+	Rn = Rn - затратыНаНауку + vl;
 	} 
 self.resume();]]></Action>
 				</Event>
